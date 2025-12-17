@@ -1,7 +1,7 @@
 import BarbershopItem from "@/components/barbershop-item";
 import BookingItem from "@/components/booking-item";
-import Footer from "@/components/footer";
 import Header from "@/components/header";
+import QuickSearch from "@/components/quick-search";
 import {
   PageContainer,
   PageSectionContent,
@@ -19,6 +19,7 @@ export default async function Home() {
     <div>
       <Header />
       <PageContainer>
+        <QuickSearch />
         <Image
           src={banner}
           alt="Agende nos melhores com a Aparatus"
@@ -50,7 +51,6 @@ export default async function Home() {
           </PageSectionScroller>
         </PageSectionContent>
       </PageContainer>
-      {/* <Footer /> */}
     </div>
   );
 }
