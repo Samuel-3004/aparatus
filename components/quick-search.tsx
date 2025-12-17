@@ -1,11 +1,31 @@
-import { Scissors, Sparkles, User, Eye, Footprints, Waves } from "lucide-react";
+import {
+  Eye,
+  Footprints,
+  Scissors,
+  SearchIcon,
+  Sparkles,
+  User,
+  Waves,
+} from "lucide-react";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 import { PageSectionScroller } from "./ui/page";
 
 const QuickSearch = () => {
   return (
-    <PageSectionScroller>
-      <Link
+    <>
+      <div className="flex items-center gap-2">
+        <Input
+          className="border-border rounded-full"
+          placeholder="Pesquise serviços ou barbearias"
+        />
+        <Button className="h-10 w-10 rounded-full">
+          <SearchIcon />
+        </Button>
+      </div>
+      <PageSectionScroller>
+        <Link
           href="/barbershops?search=cabelo"
           className="border-border bg-card-background flex shrink-0 items-center justify-center gap-3 rounded-3xl border px-4 py-2"
         >
@@ -64,7 +84,8 @@ const QuickSearch = () => {
             Progressiva
           </span>
         </Link>
-    </PageSectionScroller>
+      </PageSectionScroller>
+    </>
   );
 };
 export default QuickSearch;

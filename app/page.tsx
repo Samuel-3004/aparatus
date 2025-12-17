@@ -2,6 +2,7 @@ import BarbershopItem from "@/components/barbershop-item";
 import BookingItem from "@/components/booking-item";
 import Header from "@/components/header";
 import QuickSearch from "@/components/quick-search";
+
 import {
   PageContainer,
   PageSectionContent,
